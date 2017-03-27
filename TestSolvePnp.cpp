@@ -420,14 +420,6 @@ void TestSolvePnp(const int strategy_type) {
 }
 
 int main(/*int argc, char **argv*/) {
-  cv::Mat_<double> cameraIntrinsicParams(cv::Size(3, 3));
-  cameraIntrinsicParams = 0.;
-  cameraIntrinsicParams(0, 0) = 3844.4400000000001f;
-  cameraIntrinsicParams(1, 1) = 3841.0599999999999f;
-  cameraIntrinsicParams(0, 2) = 640.f;
-  cameraIntrinsicParams(1, 2) = 380.f;
-  cameraIntrinsicParams(2, 2) = 1.f;
-
   for (int i = 0; i < 6; i++) {
     std::cout << std::endl;
     TestSolvePnp(i);
